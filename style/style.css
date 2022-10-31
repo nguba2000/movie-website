@@ -9,3 +9,7 @@
 .card-group{
     color: black !important;
 }
+
+.footer { 
+    width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;
+}

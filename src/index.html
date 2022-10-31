@@ -9,15 +9,21 @@
     <title>Movie Website</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-   
+  
     <link rel="stylesheet" href="../style/style.css">
     
+    <!-- icons for social app click -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">   
+
+
+
     <!-- Awesome Font CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-     <!-- Navbar  -->   
+    <!-- Navbar  -->   
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><i class="fa-solid fa-ticket"></i></a> <!-- Movie Ticket Icon-->
@@ -85,68 +91,120 @@
     <main>
 
       <!-- Banner with Location and Movie buttions  -->     
-     <div class="bg-dark px-4 py-5 text-white text-center">
-       <div class="py-5">
-       <h1 class="display-5 fw-bold"> Showings and Times are now listed! </h1>
-         <div class="col-lg-6 mx-auto ">
-           <p class="lead mb-4">
-             Choose a location to watch at or a movie to select.
-           </p>
-           <div class="mb-5"> 
-             <button type="button" class="btn btn-warning btn-lg ">Location
-             </button> 			
-             
-             <button type="button" class="btn btn-warning btn-lg">Movie
-             </button> 						
-           </div>
- 
-         </div>
-       </div>
-       
-     <div class="container my-4">
-       <div class="card-group">   <!-- Cards for 3 top movies  -->     
-         <div class="card">
-           <img src="../img/mov_1.jpg" height = "550" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">The Fast and the Furious</h5>
-             <p class="card-text">The Fast and the Furious takes you inside the world of street racing. 
-               Dominic Toretto is a gang leader who is accused of hijacking trucks and stealing over 
-               a million dollars worth of electronic equipment</p>
-             <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
-           </div>
-         </div>
-         <div class="card">
-           <img src="../img/mov_2.jpg" height = "550" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">Sing</h5>
-             <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than 
-               he anticipates even as its finalists find that their lives will never be the same.</p>
-             <p class="card-text"><small class="text-muted">Last updated 2 mins ago</small></p>
-           </div>
-         </div>
-         <div class="card">
-           <img src="../img/mov_3.jpg" height = "550" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">The Imitation Game</h5>
-             <p class="card-text">During World War II, the English mathematical genius 
-               Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</p>
-             <p class="card-text"><small class="text-muted">Last updated 45 mins ago</small></p>
-           </div>
-         </div>
-       </div>
-     </div>
- 
-   </div>
- 
-   </main>
+    <div class="bg-dark px-4 py-5 text-white text-center">
+      <div class="py-5">
+      <h1 class="display-5 fw-bold"> Showings and Times are now listed! </h1>
+        <div class="col-lg-6 mx-auto ">
+          <p class="lead mb-4">
+            Choose a location to watch at or a movie to select.
+          </p>
+          <div class="mb-5"> 
+          <button type="button" class="btn btn-warning btn-lg ">Location
+            </button> 			 
+            <button type="button" class="btn btn-warning btn-lg">Movie
+            </button> 						
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <div class="card-group">   <!-- Cards for 3 top movies  -->     
+        <div class="card">
+          <img src="../img/mov_1.jpg" height = "550" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Fast and the Furious</h5>
+            <p class="card-text">The Fast and the Furious takes you inside the world of street racing. 
+              Dominic Toretto is a gang leader who is accused of hijacking trucks and stealing over 
+              a million dollars worth of electronic equipment</p>
+            <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="../img/mov_2.jpg" height = "550" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sing</h5>
+            <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than 
+              he anticipates even as its finalists find that their lives will never be the same.</p>
+            <p class="card-text"><small class="text-muted">Last updated 2 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../img/mov_3.jpg" height = "550" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Imitation Game</h5>
+            <p class="card-text">During World War II, the English mathematical genius 
+              Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</p>
+            <p class="card-text"><small class="text-muted">Last updated 45 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    </main>
+
+
+	<!-- Ending closer:  -->
+	<div class="container">
+    <div class="column">
+    
+                          <h3>Find  us</h3>
+                          <ul>
+                              <li><a href="#">Company</a></li>
+                              <li><a href="#">Team</a></li>
+                              <li><a href="#">Careers</a></li>
+                          </ul>
+                      </div>
+
+
+                          <h3>About</h3>
+                          <p class="mb10">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
+    <p><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
+    <p><i class="fa fa-phone"></i>  +91-99999999  </p>
+    <p><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
+  </div>
+
+    <!-- footer class -->
+    <div class="footer-basic">
+      <h3 class ="container text-center" >Follow us</h3>
+              <footer class"bg-dark text-white py-5>
+                    <div class="container text-center">	<!-- in the center -->
+                    <div class="social"><a href="#">
+                      <a href="https://www.instagram.com/">			<!-- link to social app website-->
+                      <i class="icon ion-social-instagram"></i></a><a href="#">
+                      <a href="https://www.snapchat.com/">
+                      <i class="icon ion-social-snapchat"></i></a><a href="#">
+                      <a href="https://www.twitter.com/">                          
+                      <i class="fa-brands fa-twitter"></i>
+                      <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook"></i>
+
+
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="#">Navbar</a></li>
+                  <li class="list-inline-item"><a href="#">Home</a></li>
+                  <li class="list-inline-item"><a href="#">Theaters</a></li>
+                  <li class="list-inline-item"><a href="#">Movies</a></li>
+                  <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              </ul>
+
+    
+              <p class="copyright">SDSU © 2022</p>
+          </footer>
+  </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  
+  
 
 
 
 
 
-
-
- <!-- JavaScript Bundle with Popper -->
+<!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>   
 
 </body>
