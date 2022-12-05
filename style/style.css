@@ -10,6 +10,17 @@
     color: black !important;
 }
 
-.footer { 
-    width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;
-}
+.footer {
+    background: black !important;
+  }
+  
+  .footer-basic{
+      background: rgb(54, 52, 52) !important;
+    }
+    .list-inline
+    {
+      background: rgb(54, 52, 52) !important;
+    }
+    .copyright{
+      background: rgb(54, 52, 52) !important;
+    }
