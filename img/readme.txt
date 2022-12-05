@@ -1,1 +1,1 @@
-Collection of images
+Collection of images for the website
