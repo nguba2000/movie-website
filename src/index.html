@@ -44,10 +44,11 @@ function incrementValue(e) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Website 1</title>
+    {% load static %}
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     
     <!-- icons for social app click -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -63,7 +64,7 @@ function incrementValue(e) {
     <!-- Navbar  -->   
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><i class="fa-solid fa-ticket"></i></a> <!-- Movie Ticket Icon-->
+          <a class="navbar-brand" href="/"><i class="fa-solid fa-ticket"></i></a> <!-- Movie Ticket Icon-->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -71,22 +72,22 @@ function incrementValue(e) {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="theaters.html">Theaters</a>
+                <a class="nav-link" href="/theaters">Theaters</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="movies.html">Movies</a>
+                <a class="nav-link" href="/movies">Movies</a>
               </li>
 
             </ul>
 
             <div class="col-md-3 text-end">
-              <a class="btn btn-warning" href="login.html" role="button">Login</a>
-              <a class="btn btn-warning" href="register.html" role="button">Register</a>
+              <a class="btn btn-warning" href="/login" role="button">Login</a>
+              <a class="btn btn-warning" href="/register" role="button">Register</a>
             </div>
           </div>
         </div>
@@ -98,7 +99,7 @@ function incrementValue(e) {
 
   <!-- Main Title and Login and Register Buttons  -->              
     <header>
-      <img src="../img/logo.png"class="rounded mx-auto d-block"style="width:300px;height:300px;" > <!--TicketFLix Logo-->
+      <img src="{%static 'img/logo.png' %}"class="rounded mx-auto d-block"style="width:300px;height:300px;" > <!--TicketFLix Logo-->
 	<div class="text-center pt-1 mt-2 px-5 border-bottom ">  
 		<div class="col-lg-5 mx-auto">
 			<p class="lead"> All current and upcoming movies are available to purchase right now!
@@ -108,7 +109,7 @@ function incrementValue(e) {
 
 			<div>
 				<div class="containter px-5">
-						<img src="../img/movie tiles.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4" width = "550">
+						<img src="{%static 'img/movie tiles.jpeg' %}" class="img-fluid border rounded-3 shadow-lg mb-4" width = "550">
 				</div>
 			</div>
       	</div>   
@@ -126,8 +127,8 @@ function incrementValue(e) {
             Choose a location to watch at or a movie to select.
           </p>
           <div class="mb-5"> 
-            <a class="btn btn-warning" href="theaters.html" role="button">Location</a>
-            <a class="btn btn-warning" href="movies.html" role="button">Movies</a>
+            <a class="btn btn-warning" href="/theaters" role="button">Location</a>
+            <a class="btn btn-warning" href="/movies" role="button">Movies</a>
           </div>
 
       </div>
@@ -136,7 +137,7 @@ function incrementValue(e) {
     <div class="container my-4">
       <div class="card-group">   <!-- Cards for 3 top movies  -->     
         <div class="card">
-          <img src="../img/mov_1.jpg" height = "550" class="card-img-top" alt="...">
+          <img src="{%static 'img/mov_1.jpg'%}" height = "550" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">The Fast and the Furious</h5>
             <p class="card-text">The Fast and the Furious takes you inside the world of street racing. 
@@ -147,7 +148,7 @@ function incrementValue(e) {
         </div>
 
         <div class="card">
-          <img src="../img/mov_2.jpg" height = "550" class="card-img-top" alt="...">
+          <img src="{%static 'img/mov_2.jpg'%}" height = "550" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Sing</h5>
             <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than 
@@ -156,7 +157,7 @@ function incrementValue(e) {
           </div>
         </div>
         <div class="card">
-          <img src="../img/mov_3.jpg" height = "550" class="card-img-top" alt="...">
+          <img src="{%static 'img/mov_3.jpg' %}" height = "550" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">The Imitation Game</h5>
             <p class="card-text">During World War II, the English mathematical genius 
@@ -186,13 +187,13 @@ function incrementValue(e) {
       width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-                          <h3 class ="container text-center text-white">About</h3>
-                          <p class="mb10 text-center text-white">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
-    <p class="text-center text-white"><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
-    <p class="text-center text-white"><i class="fa fa-phone"></i>  +91-99999999  </p>
-    <p class="text-center text-white"><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
-      <h3 class ="container text-white text-center" >Follow us</h3>
-              <footer class = py-5>
+                          <h3 class ="container text-center ">About</h3>
+                          <p class="mb10 text-center ">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
+    <p class="text-center "><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
+    <p class="text-center"><i class="fa fa-phone"></i>  +91-99999999  </p>
+    <p class="text-center "><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
+      <h3 class ="container text-center" >Follow us</h3>
+              <footer class = py-1>
                     <div class="container text-center">	<!-- in the center -->
                     <div class="social"><a href="#">
                       <a href="https://www.instagram.com/">			<!-- link to social app website-->
@@ -206,9 +207,9 @@ function incrementValue(e) {
 
 
                       <ul class="list-inline">
-                        <li class="list-inline-item"><a href="index.html">Home</a></li>
-                        <li class="list-inline-item"><a href="theaters.html">Theaters</a></li>
-                        <li class="list-inline-item"><a href="movies.html">Movies</a></li>
+                        <li class="list-inline-item"><a href="/">Home</a></li>
+                        <li class="list-inline-item"><a href="/theaters">Theaters</a></li>
+                        <li class="list-inline-item"><a href="/movies">Movies</a></li>
                     </ul>
 
     
