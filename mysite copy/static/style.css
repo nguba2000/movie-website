@@ -1,0 +1,26 @@
+.navbar {
+    background: #99190A !important;
+}
+
+.bg-dark{
+    background: #99190A !important;
+}
+
+.card-group{
+    color: black !important;
+}
+
+.footer {
+    background: black !important;
+  }
+  
+  .footer-basic{
+      background: rgb(54, 52, 52) !important;
+    }
+    .list-inline
+    {
+      background: rgb(54, 52, 52) !important;
+    }
+    .copyright{
+      background: rgb(54, 52, 52) !important;
+    }
