@@ -62,7 +62,18 @@
 
 
     </nav>
+{% if user.is_authenticated %}
+    <div class="alert alert-success" role="alert">
+        <h3>Welcome {{ user.username }}!</h3>
 
+    </div>
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h3>Welcome!</h3>
+        <a href="{% url 'register' %}">Signup</a>
+        <a href="{% url 'login_in' %}">Login</a>
+    </div>
+{% endif %}
   <!-- Main Title and Login and Register Buttons  -->              
     <header>
       <img src="{%static 'img/logo.png' %}"class="rounded mx-auto d-block"style="width:300px;height:300px;" > <!--TicketFLix Logo-->
