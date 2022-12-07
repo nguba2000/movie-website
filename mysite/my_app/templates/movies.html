@@ -11,7 +11,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     
     <!-- icons for social app click -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -60,61 +60,42 @@
 
   </nav>
 
-    <div class="album py-5 bg-light">
-      <div class="container">
-  
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-  
-              <div class="card-body">
-                <p class="card-text">Los Angeles police officer Brian O'Conner must decide 
-                  where his loyalty really lies when he becomes enamored with the street racing world he has been sent undercover to destroy.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-  
-              <div class="card-body">
-                <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than he anticipates even as its finalists find that their lives will never be the same.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-  
-              <div class="card-body">
-                <p class="card-text">During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{%static 'img/mov_1.jpg'%}" class="card-img-top" width="100%" height="540" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">The Fast and the Furious</h5>
+          <p class="card-text">The Fast and the Furious takes you inside the world of street racing. 
+            Dominic Toretto is a gang leader who is accused of hijacking trucks and stealing over 
+            a million dollars worth of electronic equipment.</p>
         </div>
+        <a href="/checkout" class="btn btn-primary">Buy Tickets</a>
       </div>
     </div>
+    <div class="col">
+      <div class="card">
+        <img src="{%static 'img/mov_2.jpg'%}" class="card-img-top" width="100%" height="540" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sing</h5>
+          <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than 
+            he anticipates even as its finalists find that their lives will never be the same.</p>
+        </div>
+        <a href="/checkout" class="btn btn-primary">Buy Tickets</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{%static 'img/mov_3.jpg'%}" class="card-img-top" width="100%" height="540"  alt="...">
+        <div class="card-body">
+          <h5 class="card-title">The Imitation Game</h5>
+          <p class="card-text">During World War II, the English mathematical genius 
+            Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</p>
+        </div>
+        <a href="/checkout" class="btn btn-primary">Buy Tickets</a>
+      </div>
+    </div>
+  </div>
 
 	<!-- Ending closer:  -->
   
@@ -126,8 +107,7 @@
     <div class="footer-basic">
 
 
-                          <h3 class ="container text-center text-white">About</h3>
-                          <p class="mb10 text-center text-white">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
+
     <p class="text-center text-white"><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
     <p class="text-center text-white"><i class="fa fa-phone"></i>  +91-99999999  </p>
     <p class="text-center text-white"><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>

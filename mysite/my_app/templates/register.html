@@ -7,21 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      .footer-basic {
-         position: fixed;
-         left: 0;
-         bottom: 0;
-         width: 100%;
-         text-align: center;
-      }
-      </style>
+
     <title>Movie Website</title>
     {% load static %}
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     
     <!-- icons for social app click -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -70,15 +62,12 @@
 
   </nav>
 
-  <style>
-    body {
-      background-image: url("\static\img\loginbg.jpg");
-      background-repeat: repeat;
-      background-attachment: fixed;
-      background-size: 100% 100%;
-    }
-    </style>
 
+    <style>
+      form {
+        margin-top: 20px;
+      }
+    </style>
 
     <form>
       <div class="mb-3 text-center">
@@ -94,6 +83,12 @@
       <center><button type="submit" class="btn btn-primary">Submit</button></center>
     </form>
 
+    <style>
+      form {
+        margin-bottom: 500px;
+      }
+    </style>
+    
 	<!-- Ending closer:  -->
   
 	
@@ -109,13 +104,9 @@
       
 
 
-                          <h3 class ="container text-center text-white">About</h3>
-                          <p class="mb10 text-center text-white">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
-    <p class="text-center text-white"><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
-    <p class="text-center text-white"><i class="fa fa-phone"></i>  +91-99999999  </p>
-    <p class="text-center text-white"><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
+
       <h3 class ="container text-white text-center" >Follow us</h3>
-              <footer class = py-1>
+              <footer class = py-5>
                     <div class="container text-center">	<!-- in the center -->
                     <div class="social"><a href="#">
                       <a href="https://www.instagram.com/">			<!-- link to social app website-->
