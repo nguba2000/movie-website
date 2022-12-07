@@ -3,41 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-function incrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
 
-        if (!isNaN(currentVal)) {
-            parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
-        } else {
-            parent.find('input[name=' + fieldName + ']').val(0);
-        }
-    }
-
-    function decrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
-
-        if (!isNaN(currentVal) && currentVal > 0) {
-            parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
-        } else {
-            parent.find('input[name=' + fieldName + ']').val(0);
-        }
-    }
-
-    $('.input-group').on('click', '.button-plus', function(e) {
-        incrementValue(e);
-    });
-
-    $('.input-group').on('click', '.button-minus', function(e) {
-        decrementValue(e);
-    });
-</script>
 
 
     <meta charset="UTF-8">
@@ -143,7 +109,6 @@ function incrementValue(e) {
             <p class="card-text">The Fast and the Furious takes you inside the world of street racing. 
               Dominic Toretto is a gang leader who is accused of hijacking trucks and stealing over 
               a million dollars worth of electronic equipment</p>
-            <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
           </div>
         </div>
 
@@ -153,7 +118,6 @@ function incrementValue(e) {
             <h5 class="card-title">Sing</h5>
             <p class="card-text">In a city of humanoid animals, a hustling theater impresario's attempt to save his theater with a singing competition becomes grander than 
               he anticipates even as its finalists find that their lives will never be the same.</p>
-            <p class="card-text"><small class="text-muted">Last updated 2 mins ago</small></p>
           </div>
         </div>
         <div class="card">
@@ -162,7 +126,6 @@ function incrementValue(e) {
             <h5 class="card-title">The Imitation Game</h5>
             <p class="card-text">During World War II, the English mathematical genius 
               Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</p>
-            <p class="card-text"><small class="text-muted">Last updated 45 mins ago</small></p>
           </div>
         </div>
       </div>
@@ -187,12 +150,12 @@ function incrementValue(e) {
       width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-                          <h3 class ="container text-center ">About</h3>
-                          <p class="mb10 text-center ">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
-    <p class="text-center "><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
-    <p class="text-center"><i class="fa fa-phone"></i>  +91-99999999  </p>
-    <p class="text-center "><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
-      <h3 class ="container text-center" >Follow us</h3>
+                          <h3 class ="container text-center text-white ">About</h3>
+                          <p class="mb10 text-center text-white ">This is a project for COMPE 561 where the objective of the website is to provide a user with the means to purchase tickets to a movie. </p>
+    <p class="text-center text-white "><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
+    <p class="text-center text-white"><i class="fa fa-phone"></i>  +91-99999999  </p>
+    <p class="text-center text-white "><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
+      <h3 class ="container text-center text-white" >Follow us</h3>
               <footer class = py-1>
                     <div class="container text-center">	<!-- in the center -->
                     <div class="social"><a href="#">
