@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.db.models import Q
 from django.views.generic import TemplateView
+from django.contrib.auth.forms import UserCreationForm
+from .forms import UserRegistrationForm
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -24,11 +27,23 @@ def login_user(request):
     else:
         return render(request, 'login.html', {})
 
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, f'Your account has been created. You can log in now!')    
+            return redirect('home')
+    else:
+        form = UserRegistrationForm()
+
+    context = {'form': form}
+    return render(request, 'register.html', context)
 def movies(request):
     return render(request, 'movies.html')
 
-def register(request):
-    return render(request, 'register.html')
+
 
 def theaters(request):
     return render(request, 'theaters.html')
