@@ -1,0 +1,76 @@
+<!-- <form method="POST">
+    <label for="num-tickets">Number of tickets:</label>
+    <input type="number" name="num-tickets" id="num-tickets" value="0">
+    <button type="button" id="increment-btn">+</button>
+    <button type="button" id="decrement-btn">-</button>
+    <input type="submit" value="Submit">
+  </form>
+  
+
+  const incrementBtn = document.getElementById('increment-btn');
+const decrementBtn = document.getElementById('decrement-btn');
+const numTicketsInput = document.getElementById('num-tickets');
+
+incrementBtn.addEventListener('click', () => {
+  numTicketsInput.value = parseInt(numTicketsInput.value) + 1;
+});
+
+decrementBtn.addEventListener('click', () => {
+  numTicketsInput.value = parseInt(numTicketsInput.value) - 1;
+});
+
+
+from django.http import HttpResponse
+
+def shopping_cart(request):
+  if request.method == 'POST':
+    num_tickets = request.POST.get('num-tickets')
+    ticket_price = 10 # current price of movie tickets
+    total_price = num_tickets * ticket_price
+    return HttpResponse(f'Total price: {total_price}')
+ -->
+
+ <!-- cart/templates/file_structure.html -->
+
+<style>
+    .file {
+      color: rgb(1, 22, 19);
+    }
+    .directory {
+      color: green;
+    }
+    .app {
+      color: blue;
+    }
+    .subdirectory {
+      color: purple;
+    }
+    .python_file {
+      color: red;
+    }
+    .template {
+      color: rgb(185, 128, 21);
+    }
+  </style>
+  
+  <pre>
+  shopping_cart/
+  ├── <span class="file">manage.py</span>
+  └── <span class="directory">shopping_cart/</span>
+      ├── <span class="app">cart/</span>
+      │   ├── <span class="subdirectory">cart/</span>
+      │   │   ├── <span class="file">__init__.py</span>
+      │   │   ├── <span class="python_file">views.py</span>
+      │   │   └── <span class="file">__pycache__/</span>
+      │   ├── <span class="file">__init__.py</span>
+      │   ├── <span class="directory">migrations/</span>
+      │   │   └── <span class="file">__init__.py</span>
+      │   ├── <span class="file">__pycache__/</span>
+      │   └── <span class="directory">templates/</span>
+      │       └── <span class="template">cart.html</span>
+      ├── <span class="file">__init__.py</span>
+      ├── <span class="file">__pycache__/</span>
+      ├── <span class="file">settings.py</span>
+      ├── <span class="file">urls.py</span>
+      └── <span class="file">wsgi.py</span>
+  </pre>
