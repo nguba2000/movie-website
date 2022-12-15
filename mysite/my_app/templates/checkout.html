@@ -7,190 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <style>
-      .footer-basic {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-      }
 
-      .container {
-
-        text-align: center
-
-      }
-
-      .container1 {
-        position: fixed;
-        left: 70%;
-        right: 0%;
-        text-align: center;
-
-      }
-
-      .container2 {
-        position: fixed;
-        left: 70%;
-        right: 0%;
-        line-height: 500px;
-        text-align: center;
-
-      }
-
-      .quantity {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-      .quantity__minus,
-.quantity__plus {
-  display: block;
-  width: 22px;
-  height: 23px;
-  margin: 0;
-  background: #dee0ee;
-  text-decoration: none;
-  text-align: center;
-  line-height: 23px;
-}
-
-      .quantity__minus:hover,
-.quantity__plus:hover {
-  background: #575b71;
-  color: #fff;
-} 
-.quantity__minus {
-  border-radius: 3px 0 0 3px;
-}
-.quantity__plus {
-  border-radius: 0 3px 3px 0;
-}
-.quantity__input {
-  width: 32px;
-  height: 19px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-top: 2px solid #8e8f96;
-  border-bottom: 2px solid #8e8f96;
-  border-left: 1px solid #8e8f96;
-  border-right: 2px solid #8e8f96;
-  background: rgb(180, 93, 93)
-  color: #0920f0;
-}
-.quantity__minus:link,
-.quantity__plus:link {
-  color: #8184a1;
-} 
-.quantity__minus:visited,
-.quantity__plus:visited {
-  color: #fff;
-}
-
-.quantity {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-      .quantity__minus1,
-.quantity__plus1 {
-  display: block;
-  width: 22px;
-  height: 23px;
-  margin: 0;
-  background: #dee0ee;
-  text-decoration: none;
-  text-align: center;
-  line-height: 23px;
-}
-
-      .quantity__minus1:hover,
-.quantity__plus1:hover {
-  background: #575b71;
-  color: #fff;
-} 
-.quantity__minus1 {
-  border-radius: 3px 0 0 3px;
-}
-.quantity__plus1 {
-  border-radius: 0 3px 3px 0;
-}
-.quantity__input1 {
-  width: 32px;
-  height: 19px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-top: 2px solid #8e8f96;
-  border-bottom: 2px solid #8e8f96;
-  border-left: 1px solid #8e8f96;
-  border-right: 2px solid #8e8f96;
-  background: rgb(180, 93, 93)
-  color: #0920f0;
-}
-.quantity__minus1:link,
-.quantity__plus1:link {
-  color: #8184a1;
-} 
-.quantity__minus1:visited,
-.quantity__plus1:visited {
-  color: #fff;
-}
-
-.quantity {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-      .quantity__minus2,
-.quantity__plus2 {
-  display: block;
-  width: 22px;
-  height: 23px;
-  margin: 0;
-  background: #dee0ee;
-  text-decoration: none;
-  text-align: center;
-  line-height: 23px;
-}
-
-      .quantity__minus2:hover,
-.quantity__plus2:hover {
-  background: #575b71;
-  color: #fff;
-} 
-.quantity__minus2 {
-  border-radius: 3px 0 0 3px;
-}
-.quantity__plus2 {
-  border-radius: 0 3px 3px 0;
-}
-.quantity__input2 {
-  width: 32px;
-  height: 19px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  border-top: 2px solid #8e8f96;
-  border-bottom: 2px solid #8e8f96;
-  border-left: 1px solid #8e8f96;
-  border-right: 2px solid #8e8f96;
-  background: rgb(180, 93, 93)
-  color: #0920f0;
-}
-.quantity__minus2:link,
-.quantity__plus2:link {
-  color: #8184a1;
-} 
-.quantity__minus2:visited,
-.quantity__plus2:visited {
-  color: #fff;
-}
       </style>
     
     <title>Movie Website</title>
@@ -234,10 +51,6 @@
 
           </ul>
 
-          <div class="col-md-3 text-end">
-            <a class="btn btn-warning" href="/login" role="button">Login</a>
-            <a class="btn btn-warning" href="/register" role="button">Register</a>
-          </div>
         </div>
       </div>
       
@@ -246,90 +59,127 @@
 
   </nav>
 
-    <div class="container">
+  <h1 style="text-align: center;">Movie Ticket Checkout</h1>
+
+  <form method="post" style="display: flex; justify-content: center;">
+      {% csrf_token %}
   
-      <h1>AMOUNT OF TICKETS TO PURCHASE</h1>
+      <p style="margin-top: 40px;">Number of kids tickets:
+          <button type="button" onclick="decrement('num_kids')">-</button>
+          <input type="number" name="num_kids" id="num_kids" min="0" value="0">
+          <button type="button" onclick="increment('num_kids')">+</button>
+      </p>
 
-      <h4>Adult Ticket Quantity</h4>
-      <div class="quantity">
-        <a href="#" class="quantity__minus"><span>-</span></a>
-        <input name="quantity" type="text" class="quantity__input" value="0">
-        <a href="#" class="quantity__plus"><span>+</span></a>
-      </div>
+      <p style="margin-top: 100px;">Number of adults tickets:
+          <button type="button" onclick="decrement('num_adults')">-</button>
+          <input type="number" name="num_adults" id="num_adults" min="0" value="0">
+          <button type="button" onclick="increment('num_adults')">+</button>
+      </p>
+      <p style="margin-top: 40px;">Number of seniors tickets:
+          <button type="button" onclick="decrement('num_seniors')">-</button>
+          <input type="number" name="num_seniors" id="num_seniors" min="0" value="0">
+          <button type="button" onclick="increment('num_seniors')">+</button>
+      </p>
+  
+      <p style="text-align: center; margin-top: 200px;"><input type="submit" value="Buy Tickets" style="margin: 0 auto;"></p>
+  </form>
+  
+  <div class="container wow fadeIn">
 
-      <h4>Child Ticket Quantity</h4>
-      <div class="quantity">
-        <a href="#" class="quantity__minus1"><span>-</span></a>
-        <input name="quantity" type="text" class="quantity__input1" value="0">
-        <a href="#" class="quantity__plus1"><span>+</span></a>
-      </div>
+    <!--Grid row-->
+    <div class="row">
 
-      <h4>Senior Ticket Quantity</h4>
-      <div class="quantity">
-        <a href="#" class="quantity__minus2"><span>-</span></a>
-        <input name="quantity" type="text" class="quantity__input2" value="0">
-        <a href="#" class="quantity__plus2"><span>+</span></a>
+      <!--Grid column-->
+      <div class="col-md-4 mb-4">
+
+        <!-- Cart -->
+        <ul class="list-group mb-3 z-depth-1">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Adults</h6>
+            </div>
+            <span class="text-muted">$10</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Seniors</h6>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Kids</h6>
+
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+
+        </ul>
+        <!-- Cart -->
+
+
       </div>
-      
-      
+      <!--Grid column-->
+
     </div>
+    <!--Grid row-->
 
-    <div class="col-25">
-      <div class="container1">
-        <h4>Cart
-          <span class="price" style="color:black">
-            <i class="fa fa-shopping-cart"></i>
-          </span>
-        </h4>
-        <p> Adult Tickets <span class="price">$</span></p>
-        <p> Child Tickets <span class="price">$</span></p>
-        <p> Senior Tickets <span class="price">$</span></p>
-        <hr>
-        <p>Total <span class="price" style="color:black"><b>$</b></span></p>
-      </div>
-    </div>
+  </div>
 
-    <div class="container2">
-      <a class="btn btn-warning" href="login.html" role="button">Proceed to Checkout</a>
-    </div>
+  <script>
+  function increment(field_id) {
+      var field = document.getElementById(field_id);
+      field.value = parseInt(field.value) + 1;
+  }
+  
+  function decrement(field_id) {
+      var field = document.getElementById(field_id);
+      if (field.value > 0) {
+          field.value = parseInt(field.value) - 1;
+      }
+  }
+  </script>
+
 
 
 	<!-- Ending closer:  -->
-   
+  
     <!-- footer class -->
-   
+    
     <div class="footer-basic">
       
 
+    <p class="text-center text-white"><i class="fa fa-location-arrow"></i>  5500 Campanile Dr, San Diego, CA 92182 </p>
+    <p class="text-center text-white"><i class="fa fa-phone"></i>  +91-99999999  </p>
+    <p class="text-center text-white"><i class="fa fa fa-envelope"></i> sdsu@edu.com  </p>
+      <h3 class ="container text-white text-center" >Follow us</h3>
+              <footer class = py-1>
+                    <div class="container text-center">	<!-- in the center -->
+                    <div class="social"><a href="#">
+                      <a href="https://www.instagram.com/">			<!-- link to social app website-->
+                      <i class="icon ion-social-instagram"></i></a><a href="#">
+                      <a href="https://www.snapchat.com/">
+                      <i class="icon ion-social-snapchat"></i></a><a href="#">
+                      <a href="https://www.twitter.com/">                          
+                      <i class="fa-brands fa-twitter"></i>
+                      <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook"></i>
 
 
-      <footer class = py-5>
-            <div class="container text-center">	<!-- in the center -->
-            <div class="social"><a href="#">
-              <a href="https://www.instagram.com/">			<!-- link to social app website-->
-              <i class="icon ion-social-instagram"></i></a><a href="#">
-              <a href="https://www.snapchat.com/">
-              <i class="icon ion-social-snapchat"></i></a><a href="#">
-              <a href="https://www.twitter.com/">                          
-              <i class="fa-brands fa-twitter"></i>
-              <a href="https://www.facebook.com/">
-              <i class="fa-brands fa-facebook"></i>
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><a href="/">Home</a></li>
+                        <li class="list-inline-item"><a href="/theaters">Theaters</a></li>
+                        <li class="list-inline-item"><a href="/movies">Movies</a></li>
+                    </ul>
 
-
-              <ul class="list-inline">
-                <li class="list-inline-item"><a href="/">Home</a></li>
-                <li class="list-inline-item"><a href="/theaters">Theaters</a></li>
-                <li class="list-inline-item"><a href="/movies">Movies</a></li>
-            </ul>
-
-
-      <p style="color:rgb(165, 165, 231)" class="copyright">SDSU © 2022</p>
-  </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
-
+    
+              <p style="color:rgb(165, 165, 231)" class="copyright">SDSU © 2022</p>
+          </footer>
+  </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  
+  
 
 
 
